@@ -5,9 +5,10 @@ import { Home } from "./pages/home/Home";
 import Login from "./pages/login/Login";
 import { Products } from "./pages/products/Products";
 import { Users } from "./pages/users/Users";
+import "./styles/global.scss";
 
-import * as React from "react";
-import { createRoot } from "react-dom/client";
+// import * as React from "react";
+// import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
 function App() {
