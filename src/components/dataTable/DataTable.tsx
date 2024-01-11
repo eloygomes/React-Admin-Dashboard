@@ -49,6 +49,7 @@ function DataTable() {
   return (
     <div className="datatable">
       <DataGrid
+        className="dataGrid"
         rows={rows}
         columns={columns}
         initialState={{
@@ -58,9 +59,14 @@ function DataTable() {
             },
           },
         }}
-        pageSizeOptions={[5]}
+        slotProps={{
+          toolbar: {
+            showQuickFilter: true,
+          },
+        }}
+        pageSizeOptions={[10]}
         checkboxSelection
-        disableRowSelectionOnClick
+        // disableRowSelectionOnClick
       />
     </div>
   );
