@@ -19,6 +19,19 @@ function DataTable() {
       },
     },
     {
+      field: "actions",
+      headerName: "Actions",
+      width: 90,
+      renderCell: (params) => {
+        return (
+          <div className="actions">
+            <div className="view">View</div>
+            <div className="delete">Delete</div>
+          </div>
+        );
+      },
+    },
+    {
       field: "name",
       headerName: "Status",
       width: 100,
