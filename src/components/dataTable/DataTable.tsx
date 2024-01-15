@@ -1,12 +1,7 @@
-import {
-  DataGrid,
-  GridColDef,
-  GridToolbar,
-  GridValueGetterParams,
-} from "@mui/x-data-grid";
-import "./datatable.scss";
-import { Grid } from "@mui/material";
-import { Link, NavLink } from "react-router-dom";
+import { DataGrid, GridColDef, GridToolbar } from "@mui/x-data-grid";
+import "./dataTable.scss";
+import { Link } from "react-router-dom";
+// import { useMutation, useQueryClient } from "@tanstack/react-query";
 
 type Props = {
   columns: GridColDef[];
@@ -14,23 +9,37 @@ type Props = {
   slug: string;
 };
 
-function DataTable(props: Props) {
+const DataTable = (props: Props) => {
+  // TEST THE API
+
+  // const queryClient = useQueryClient();
+  // // const mutation = useMutation({
+  // //   mutationFn: (id: number) => {
+  // //     return fetch(`http://localhost:8800/api/${props.slug}/${id}`, {
+  // //       method: "delete",
+  // //     });
+  // //   },
+  // //   onSuccess: ()=>{
+  // //     queryClient.invalidateQueries([`all${props.slug}`]);
+  // //   }
+  // // });
+
   const handleDelete = (id: number) => {
-    //axios.delete(`/api/${slug}/${id}``)
-    console.log(id + "has been deleted!");
+    //delete the item
+    // mutation.mutate(id)
   };
 
   const actionColumn: GridColDef = {
     field: "action",
     headerName: "Action",
     width: 200,
-    renderCell: (param) => {
+    renderCell: (params) => {
       return (
         <div className="action">
-          <Link to={`/${props.slug}/${param.row.id}`}>
+          <Link to={`/${props.slug}/${params.row.id}`}>
             <img src="/view.svg" alt="" />
           </Link>
-          <div className="delete" onClick={() => handleDelete(param.row.id)}>
+          <div className="delete" onClick={() => handleDelete(params.row.id)}>
             <img src="/delete.svg" alt="" />
           </div>
         </div>
@@ -39,7 +48,7 @@ function DataTable(props: Props) {
   };
 
   return (
-    <div className="datatable">
+    <div className="dataTable">
       <DataGrid
         className="dataGrid"
         rows={props.rows}
@@ -58,7 +67,7 @@ function DataTable(props: Props) {
             quickFilterProps: { debounceMs: 500 },
           },
         }}
-        pageSizeOptions={[10]}
+        pageSizeOptions={[5]}
         checkboxSelection
         disableRowSelectionOnClick
         disableColumnFilter
@@ -67,6 +76,6 @@ function DataTable(props: Props) {
       />
     </div>
   );
-}
+};
 
 export default DataTable;

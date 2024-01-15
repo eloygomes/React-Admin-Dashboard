@@ -1,4 +1,5 @@
 @import "../../styles/variables.scss";
+@import "../../styles/responsive.scss";
 
 .menu {
   .item {
@@ -9,9 +10,13 @@
 
     .title {
       font-size: 12px;
-      font-weight: bold;
+      font-weight: 200;
       color: $soft-color;
       text-transform: uppercase;
+
+      @include lg {
+        display: none;
+      }
     }
 
     .listItem {
@@ -19,10 +24,16 @@
       align-items: center;
       gap: 10px;
       padding: 10px;
+      border-radius: 5px;
 
       &:hover {
         background-color: $soft-bg;
-        border-radius: 5px;
+      }
+
+      .listItemTitle {
+        @include lg {
+          display: none;
+        }
       }
     }
   }

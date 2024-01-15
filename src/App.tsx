@@ -10,6 +10,8 @@ import Products from "./pages/products/Products";
 // import * as React from "react";
 // import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import User from "./pages/user/User";
+import Product from "./pages/product/Product";
 
 function App() {
   const Layout = () => {
@@ -37,6 +39,8 @@ function App() {
         { path: "/", element: <Home /> },
         { path: "/products", element: <Products /> },
         { path: "/users", element: <Users /> },
+        { path: "/users/:id", element: <User /> },
+        { path: "/products/:id", element: <Product /> },
       ],
     },
     {
