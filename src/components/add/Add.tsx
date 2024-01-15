@@ -13,7 +13,7 @@ const Add = (props: Props) => {
       <div className="modal">
         <span className="close">X</span>
         <h1>Add new {props.slug}</h1>
-        <form action="">
+        <form>
           {props.columns.map((column) => (
             <div className="item">
               <label>{column.headerName}</label>
