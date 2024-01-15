@@ -1,13 +1,12 @@
 import {
   Area,
   AreaChart,
-  CartesianGrid,
   ResponsiveContainer,
   Tooltip,
   XAxis,
   YAxis,
 } from "recharts";
-import "./bigchartbox.scss";
+import "./bigChartBox.scss";
 
 const data = [
   {
@@ -56,7 +55,7 @@ const data = [
 
 const BigChartBox = () => {
   return (
-    <div className="bigchartbox">
+    <div className="bigChartBox">
       <h1>Revenue Analytics</h1>
       <div className="chart">
         <ResponsiveContainer width="99%" height="100%">

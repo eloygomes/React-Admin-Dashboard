@@ -1,4 +1,4 @@
-import "./TopBox.scss";
+import "./topBox.scss";
 import { topDealUsers } from "../../data";
 
 const TopBox = () => {
@@ -15,7 +15,7 @@ const TopBox = () => {
                 <span className="email">{user.email}</span>
               </div>
             </div>
-            <span className="amount">{user.amount}</span>
+            <span className="amount">${user.amount}</span>
           </div>
         ))}
       </div>
