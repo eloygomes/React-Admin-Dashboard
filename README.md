@@ -25,7 +25,7 @@ O React Admin Dashboard é uma aplicação web de painel administrativo constru�
 3. Instale as dependências: `npm install`
 4. Inicie a aplicação: `npm start`
 
-Acesse [http://localhost:3000](http://localhost:3000) em seu navegador para visualizar o dashboard.
+Acesse [http://localhost:3000] em seu navegador para visualizar o dashboard.
 
 ## Contribuição
 
@@ -33,11 +33,11 @@ Sinta-se à vontade para contribuir! Abra uma issue para relatar problemas ou en
 
 ## Licença
 
-Este projeto está licenciado sob a Licença MIT - consulte o arquivo [LICENSE](LICENSE) para obter detalhes.
+Este projeto está licenciado sob a Licença MIT - consulte o arquivo [LICENSE] para obter detalhes.
 
 ## Contato
 
-Para qualquer dúvida ou sugestão, entre em contato com [seu_email@example.com](mailto:seu_email@example.com).
+Para qualquer dúvida ou sugestão, entre em contato com eloy.gomes@icloud.com
 
 ---
 
